@@ -409,6 +409,15 @@
     (function () {
       var btns = document.querySelectorAll('.pf-filter__btn');
       var cards = document.querySelectorAll('.pf-card');
+      cards.forEach(function (c) {
+        c.style.cursor = 'pointer';
+        c.addEventListener('click', function (e) {
+          if (e.target.closest('a')) return;
+          if (window.getSelection && String(window.getSelection())) return;
+          var a = c.querySelector('.pf-card__title');
+          if (a) location.href = a.getAttribute('href');
+        });
+      });
       btns.forEach(function (b) {
         b.addEventListener('click', function () {
           var f = b.getAttribute('data-filter');
