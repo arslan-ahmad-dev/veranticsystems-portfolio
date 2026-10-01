@@ -807,3 +807,8 @@ fieldset.field { border: 0; padding: 0; }
 .pf-more > summary { display: flex; width: fit-content; }
 .pf-more[open] summary span { display: inline-block; transform: rotate(45deg); }
 .pf-more summary:focus-visible { outline: none; box-shadow: 0 0 0 4px rgba(var(--accent-rgb), .2); }
+.pf-card[hidden] { display: none; }
+.pf-card--pod { border-color: rgba(var(--accent-rgb), .45); }
+@media (min-width: 1024px) { .pf-card--pod { grid-column: span 3; flex-direction: row; } .pf-card--pod .work-card__media { width: 38%; height: auto; min-height: 260px; flex-shrink: 0; } .pf-card--pod .work-card__body { padding: 32px; } }
+@media (min-width: 768px) and (max-width: 1023px) { .pf-card--pod { grid-column: span 2; } }
+#projects { padding-top: 24px; }
