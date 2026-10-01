@@ -62,11 +62,6 @@
               <span class="brand__name">Verantic<span>Systems</span></span>
             </a>
 
-            <nav aria-label="Portfolio sections" class="nav__links">
-              <a href="#podagain" class="nav__link">PodAgain</a>
-              <a href="#projects" class="nav__link">Projects</a>
-            </nav>
-
             <div class="nav__tools">
               <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch to dark theme" title="Switch theme">
                 <svg class="i i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
@@ -92,7 +87,7 @@
             <p class="page-hero__lead">From an AI podcast platform with on-demand GPUs to marketplace scrapers and full Django business systems. A selection of the engineering behind the automation work.</p>
             <div class="page-hero__actions">
               <button type="button" class="btn-primary btn-shimmer" data-book>Discuss Your Project</button>
-              <a href="#podagain" class="btn-outline">See PodAgain</a>
+              <a href="#projects" class="btn-outline">Browse projects</a>
             </div>
           </div>
         </div>
@@ -110,21 +105,24 @@
         </div>
       </section>
 
+      <!-- projects:start -->
       <section class="sec sec--void" id="projects">
         <div class="container">
           <div class="work__grid pf-grid">
-            <div class="work-card pf-card pf-card--pod card" data-group="mern" data-tilt>
+            <div class="work-card pf-card card pf-card--pod" data-group="mern" data-tilt>
               <div class="work-card__media">
-                <div class="work-card__bg work-card__bg--a"><svg class="work-card__art" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 22 a14 14 0 0 1 14 14 v22 a14 14 0 0 1 -28 0 V36 a14 14 0 0 1 14 -14Z" fill="none" stroke="currentColor" stroke-width="4"/><path d="M34 54 a26 26 0 0 0 52 0 M60 80 V100 M46 100 H74" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg></div>
+                <div class="work-card__bg work-card__bg--a">
+                  <svg class="work-card__art" viewBox="0 0 120 120" aria-hidden="true"><path d="M60 22 a14 14 0 0 1 14 14 v22 a14 14 0 0 1 -28 0 V36 a14 14 0 0 1 14 -14Z" fill="none" stroke="currentColor" stroke-width="4"/><path d="M34 54 a26 26 0 0 0 52 0 M60 80 V100 M46 100 H74" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+                </div>
                 <span class="work-card__tag">Featured · MERN + AI</span>
               </div>
               <div class="work-card__body">
                 <p class="work-card__cat">MERN · Python · Celery · AWS EC2 · AI</p>
-                <h3>PodAgain: AI Learning &amp; Podcast Platform</h3>
+                <h3><a class="pf-card__title" href="projects/podagain/">PodAgain: AI Learning &amp; Podcast Platform</a></h3>
                 <p class="pf-card__sum">Podcasts, blogs, PDFs and documents turned into a searchable knowledge base, then into a two-person AI podcast. Rebuilt from a blocking prototype into a queue-based platform with GPU servers that start and stop on demand.</p>
                 <ul class="pf-list"><li>Celery job pipelines for transcription, embeddings and audio generation</li><li>Qwen voices instead of ElevenLabs, Pinecone search, AssemblyAI transcripts</li><li>Subscriptions plus per-minute usage credits</li></ul>
-                <div class="chips pf-stack"><span class="chip">React</span><span class="chip">Node / Express</span><span class="chip">Celery</span><span class="chip">AWS EC2 (GPU)</span><span class="chip">Pinecone</span><span class="chip">Qwen</span></div>
-                <a class="work-card__link" href="#podagain" style="margin-top:14px">Read the case study<span class="arrow">→</span></a>
+                <div class="chips pf-stack"><span class="chip">React</span><span class="chip">Node / Express</span><span class="chip">MongoDB</span><span class="chip">Python</span><span class="chip">Celery</span><span class="chip">Redis</span></div>
+                <span class="work-card__link pf-card__more">View details &amp; roadmap<span class="arrow">→</span></span>
               </div>
             </div>
             <div class="work-card pf-card card" data-group="mern" data-tilt>
@@ -136,10 +134,11 @@
               </div>
               <div class="work-card__body">
                 <p class="work-card__cat">MERN · Python · Pinecone · LLM</p>
-                <h3>AI Support Copilot for Knowledge Bases</h3>
+                <h3><a class="pf-card__title" href="projects/ai-support-copilot/">AI Support Copilot for Knowledge Bases</a></h3>
                 <p class="pf-card__sum">A React front end and Node API over a Python retrieval service. Teams upload help-centre articles, PDFs and past tickets; agents get cited answers and suggested replies inside the ticket view.</p>
                 <ul class="pf-list"><li>Ingestion runs as queued jobs, so large uploads never block the app</li><li>Answers cite the source passage, so agents can check before sending</li><li>Per-workspace indexes keep each customer's data separate</li></ul>
                 <div class="chips pf-stack"><span class="chip">React</span><span class="chip">Node / Express</span><span class="chip">MongoDB</span><span class="chip">Python</span><span class="chip">Pinecone</span><span class="chip">Redis</span></div>
+                <span class="work-card__link pf-card__more">View details &amp; roadmap<span class="arrow">→</span></span>
               </div>
             </div>
             <div class="work-card pf-card card" data-group="mern" data-tilt>
@@ -151,10 +150,11 @@
               </div>
               <div class="work-card__body">
                 <p class="work-card__cat">MERN · Stripe · Socket.io</p>
-                <h3>Multi-Tenant Booking &amp; Subscription Platform</h3>
+                <h3><a class="pf-card__title" href="projects/booking-subscription-platform/">Multi-Tenant Booking &amp; Subscription Platform</a></h3>
                 <p class="pf-card__sum">A white-label booking SaaS: each business gets its own branded site, staff calendars, deposits and recurring plans, all on one codebase.</p>
                 <ul class="pf-list"><li>Tenant-aware API with role-based access for owners, staff and clients</li><li>Live calendar updates over WebSockets, no refresh needed</li><li>Webhook-driven billing with retries and an audit trail</li></ul>
                 <div class="chips pf-stack"><span class="chip">React</span><span class="chip">Node / Express</span><span class="chip">MongoDB</span><span class="chip">Stripe</span><span class="chip">Socket.io</span><span class="chip">AWS</span></div>
+                <span class="work-card__link pf-card__more">View details &amp; roadmap<span class="arrow">→</span></span>
               </div>
             </div>
             <div class="work-card pf-card card" data-group="mern" data-tilt>
@@ -166,10 +166,11 @@
               </div>
               <div class="work-card__body">
                 <p class="work-card__cat">MERN · Maps · Real-time</p>
-                <h3>Live Logistics &amp; Dispatch Dashboard</h3>
+                <h3><a class="pf-card__title" href="projects/logistics-dispatch-dashboard/">Live Logistics &amp; Dispatch Dashboard</a></h3>
                 <p class="pf-card__sum">Dispatchers see every vehicle and job on one live map. Drivers update status from a mobile web view, and customers get tracking links.</p>
                 <ul class="pf-list"><li>Event stream for location and status, batched to stay light on the database</li><li>Route and ETA views for dispatchers, simple status taps for drivers</li><li>Exportable job history and proof-of-delivery</li></ul>
                 <div class="chips pf-stack"><span class="chip">React</span><span class="chip">Node / Express</span><span class="chip">MongoDB</span><span class="chip">Socket.io</span><span class="chip">Mapbox</span><span class="chip">Docker</span></div>
+                <span class="work-card__link pf-card__more">View details &amp; roadmap<span class="arrow">→</span></span>
               </div>
             </div>
             <div class="work-card pf-card card" data-group="mern" data-tilt>
@@ -181,10 +182,11 @@
               </div>
               <div class="work-card__body">
                 <p class="work-card__cat">MERN · Socket.io · Stripe</p>
-                <h3>Restaurant Ordering &amp; Kitchen Display System</h3>
+                <h3><a class="pf-card__title" href="projects/restaurant-ordering-kds/">Restaurant Ordering &amp; Kitchen Display System</a></h3>
                 <p class="pf-card__sum">Customers order from a QR code at the table or online. Orders appear instantly on kitchen screens, and the front of house sees status and takes payment.</p>
                 <ul class="pf-list"><li>Real-time order tickets by station, with timers and bump buttons</li><li>Menu, modifiers and availability managed by the restaurant</li><li>Multi-location accounts with per-site reports</li></ul>
                 <div class="chips pf-stack"><span class="chip">React</span><span class="chip">Node / Express</span><span class="chip">MongoDB</span><span class="chip">Socket.io</span><span class="chip">Stripe</span><span class="chip">PWA</span></div>
+                <span class="work-card__link pf-card__more">View details &amp; roadmap<span class="arrow">→</span></span>
               </div>
             </div>
             <div class="work-card pf-card card" data-group="mern" data-tilt>
@@ -196,10 +198,11 @@
               </div>
               <div class="work-card__body">
                 <p class="work-card__cat">MERN · Maps · Search</p>
-                <h3>Property Listings Marketplace</h3>
+                <h3><a class="pf-card__title" href="projects/property-listings-marketplace/">Property Listings Marketplace</a></h3>
                 <p class="pf-card__sum">Agents publish listings with photo galleries; buyers search on a map with filters, save searches and send enquiries straight to the agent.</p>
                 <ul class="pf-list"><li>Map and filter search with saved searches and email alerts</li><li>Agent dashboard for listings, enquiries and viewings</li><li>Image upload pipeline with automatic resizing</li></ul>
                 <div class="chips pf-stack"><span class="chip">React</span><span class="chip">Node / Express</span><span class="chip">MongoDB</span><span class="chip">Mapbox</span><span class="chip">Cloudinary</span><span class="chip">Redis</span></div>
+                <span class="work-card__link pf-card__more">View details &amp; roadmap<span class="arrow">→</span></span>
               </div>
             </div>
             <div class="work-card pf-card card" data-group="mern" data-tilt>
@@ -211,10 +214,11 @@
               </div>
               <div class="work-card__body">
                 <p class="work-card__cat">MERN · WebRTC · Stripe</p>
-                <h3>Telehealth Appointment &amp; Video Consult Platform</h3>
+                <h3><a class="pf-card__title" href="projects/telehealth-video-consult/">Telehealth Appointment &amp; Video Consult Platform</a></h3>
                 <p class="pf-card__sum">Patients book a slot, pay, and join a video consultation from the browser. Clinicians get a calendar, notes and follow-up prompts.</p>
                 <ul class="pf-list"><li>Browser-based video rooms with waiting-room and reminders</li><li>Role-based access, with session notes visible only to the care team</li><li>Payments and invoices tied to each appointment</li></ul>
                 <div class="chips pf-stack"><span class="chip">React</span><span class="chip">Node / Express</span><span class="chip">MongoDB</span><span class="chip">WebRTC</span><span class="chip">Twilio</span><span class="chip">Stripe</span></div>
+                <span class="work-card__link pf-card__more">View details &amp; roadmap<span class="arrow">→</span></span>
               </div>
             </div>
             <div class="work-card pf-card card" data-group="mern" data-tilt>
@@ -226,10 +230,11 @@
               </div>
               <div class="work-card__body">
                 <p class="work-card__cat">MERN · Stripe · PDF</p>
-                <h3>Invoicing &amp; Expense SaaS</h3>
+                <h3><a class="pf-card__title" href="projects/invoicing-expense-saas/">Invoicing &amp; Expense SaaS</a></h3>
                 <p class="pf-card__sum">Freelancers and small teams create branded invoices, accept card payments, track expenses and see cash flow in one dashboard.</p>
                 <ul class="pf-list"><li>Recurring invoices and automatic payment reminders</li><li>Receipt uploads with categories and monthly summaries</li><li>Client portal where invoices can be viewed and paid</li></ul>
                 <div class="chips pf-stack"><span class="chip">React</span><span class="chip">Node / Express</span><span class="chip">MongoDB</span><span class="chip">Stripe</span><span class="chip">Redis</span><span class="chip">AWS S3</span></div>
+                <span class="work-card__link pf-card__more">View details &amp; roadmap<span class="arrow">→</span></span>
               </div>
             </div>
             <div class="work-card pf-card card" data-group="python" data-tilt>
@@ -241,10 +246,11 @@
               </div>
               <div class="work-card__body">
                 <p class="work-card__cat">Python · Playwright · PostgreSQL</p>
-                <h3>Amazon Price &amp; Seller Monitor</h3>
+                <h3><a class="pf-card__title" href="projects/amazon-price-seller-monitor/">Amazon Price &amp; Seller Monitor</a></h3>
                 <p class="pf-card__sum">A scheduled pipeline that tracks price, stock, Buy Box owner and seller count for a list of Amazon listings, and alerts the team when something moves.</p>
                 <ul class="pf-list"><li>Rotating sessions and retry logic to cope with layout changes and blocks</li><li>History table for trend charts and daily change reports</li><li>Alert rules per product: price drop, stock-out, new seller</li></ul>
                 <div class="chips pf-stack"><span class="chip">Python</span><span class="chip">Playwright</span><span class="chip">Proxies</span><span class="chip">PostgreSQL</span><span class="chip">Celery</span><span class="chip">Slack / Email</span></div>
+                <span class="work-card__link pf-card__more">View details &amp; roadmap<span class="arrow">→</span></span>
               </div>
             </div>
             <div class="work-card pf-card card" data-group="python" data-tilt>
@@ -256,10 +262,11 @@
               </div>
               <div class="work-card__body">
                 <p class="work-card__cat">Python · Scrapy · FastAPI</p>
-                <h3>Walmart Catalogue &amp; Pricing Scraper</h3>
+                <h3><a class="pf-card__title" href="projects/walmart-catalogue-scraper/">Walmart Catalogue &amp; Pricing Scraper</a></h3>
                 <p class="pf-card__sum">Collects product, price, availability and review data for chosen categories and sellers, normalises it and serves it through a private API and scheduled CSV exports.</p>
                 <ul class="pf-list"><li>Category and keyword crawls with de-duplication across runs</li><li>Cleaned, typed fields ready for BI tools or a repricer</li><li>Run reports show coverage, failures and how long each crawl took</li></ul>
                 <div class="chips pf-stack"><span class="chip">Python</span><span class="chip">Scrapy</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">Docker</span><span class="chip">AWS</span></div>
+                <span class="work-card__link pf-card__more">View details &amp; roadmap<span class="arrow">→</span></span>
               </div>
             </div>
             <div class="work-card pf-card card" data-group="python" data-tilt>
@@ -271,10 +278,11 @@
               </div>
               <div class="work-card__body">
                 <p class="work-card__cat">Python · Pandas · APIs</p>
-                <h3>Cross-Marketplace Repricing Engine</h3>
+                <h3><a class="pf-card__title" href="projects/cross-marketplace-repricer/">Cross-Marketplace Repricing Engine</a></h3>
                 <p class="pf-card__sum">Combines Amazon and Walmart price feeds with your own cost data and rules to propose or push new prices, with guardrails on minimum margin.</p>
                 <ul class="pf-list"><li>Rule engine: match, undercut or hold, within a margin floor</li><li>Dry-run mode shows the effect before anything is changed</li><li>Every price change is logged with the rule that caused it</li></ul>
                 <div class="chips pf-stack"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">Celery</span><span class="chip">Redis</span></div>
+                <span class="work-card__link pf-card__more">View details &amp; roadmap<span class="arrow">→</span></span>
               </div>
             </div>
             <div class="work-card pf-card card" data-group="python" data-tilt>
@@ -286,10 +294,11 @@
               </div>
               <div class="work-card__body">
                 <p class="work-card__cat">Python · FastAPI · OCR</p>
-                <h3>Invoice &amp; Document Extraction Service</h3>
+                <h3><a class="pf-card__title" href="projects/invoice-document-extraction/">Invoice &amp; Document Extraction Service</a></h3>
                 <p class="pf-card__sum">Upload invoices, receipts or forms and get structured JSON back. Large batches go through a queue and results are delivered by webhook.</p>
                 <ul class="pf-list"><li>Per-field confidence scores, with low-confidence items flagged for review</li><li>Idempotent API and webhooks safe to retry</li><li>Exports to CSV or straight into your accounting tool</li></ul>
                 <div class="chips pf-stack"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">OCR</span><span class="chip">LLM</span><span class="chip">Celery</span><span class="chip">S3</span></div>
+                <span class="work-card__link pf-card__more">View details &amp; roadmap<span class="arrow">→</span></span>
               </div>
             </div>
             <div class="work-card pf-card card" data-group="django" data-tilt>
@@ -301,10 +310,11 @@
               </div>
               <div class="work-card__body">
                 <p class="work-card__cat">Django · DRF · PostgreSQL</p>
-                <h3>School Management System</h3>
+                <h3><a class="pf-card__title" href="projects/school-management-system/">School Management System</a></h3>
                 <p class="pf-card__sum">Admissions, attendance, timetables, fee collection, exams and report cards in one system, with separate views for admins, teachers, students and parents.</p>
                 <ul class="pf-list"><li>Role-based permissions across four user types</li><li>Fee vouchers, receipts and defaulter reports</li><li>Report cards generated as PDFs in the background</li></ul>
                 <div class="chips pf-stack"><span class="chip">Django</span><span class="chip">Django REST Framework</span><span class="chip">PostgreSQL</span><span class="chip">Celery</span><span class="chip">Redis</span><span class="chip">Docker</span></div>
+                <span class="work-card__link pf-card__more">View details &amp; roadmap<span class="arrow">→</span></span>
               </div>
             </div>
             <div class="work-card pf-card card" data-group="django" data-tilt>
@@ -316,10 +326,11 @@
               </div>
               <div class="work-card__body">
                 <p class="work-card__cat">Django · DRF · Celery · Stripe</p>
-                <h3>Multi-Vendor Marketplace</h3>
+                <h3><a class="pf-card__title" href="projects/multi-vendor-marketplace/">Multi-Vendor Marketplace</a></h3>
                 <p class="pf-card__sum">Vendors list products and manage orders, customers shop one cart across vendors, and admins control commissions and payouts.</p>
                 <ul class="pf-list"><li>Split payments and commission rules per vendor</li><li>Order and shipment status per vendor inside a single customer order</li><li>Search and filters that stay fast on large catalogues</li></ul>
                 <div class="chips pf-stack"><span class="chip">Django</span><span class="chip">DRF</span><span class="chip">PostgreSQL</span><span class="chip">Celery</span><span class="chip">Stripe Connect</span><span class="chip">Elasticsearch</span></div>
+                <span class="work-card__link pf-card__more">View details &amp; roadmap<span class="arrow">→</span></span>
               </div>
             </div>
             <div class="work-card pf-card card" data-group="django" data-tilt>
@@ -331,10 +342,11 @@
               </div>
               <div class="work-card__body">
                 <p class="work-card__cat">Django · PostgreSQL · REST</p>
-                <h3>Inventory &amp; Order Management System</h3>
+                <h3><a class="pf-card__title" href="projects/inventory-order-management/">Inventory &amp; Order Management System</a></h3>
                 <p class="pf-card__sum">Multi-warehouse stock, purchase orders, sales orders and invoicing for a distributor, with barcode scanning and low-stock reordering.</p>
                 <ul class="pf-list"><li>Stock ledger so every movement can be traced</li><li>Purchase-order suggestions from sales history and lead times</li><li>Role-based approvals and a full change history</li></ul>
                 <div class="chips pf-stack"><span class="chip">Django</span><span class="chip">DRF</span><span class="chip">PostgreSQL</span><span class="chip">Celery</span><span class="chip">Redis</span><span class="chip">React admin</span></div>
+                <span class="work-card__link pf-card__more">View details &amp; roadmap<span class="arrow">→</span></span>
               </div>
             </div>
             <div class="work-card pf-card card" data-group="django" data-tilt>
@@ -346,71 +358,18 @@
               </div>
               <div class="work-card__body">
                 <p class="work-card__cat">Django · Celery · PostgreSQL</p>
-                <h3>HR, Leave &amp; Payroll Portal</h3>
+                <h3><a class="pf-card__title" href="projects/hr-leave-payroll-portal/">HR, Leave &amp; Payroll Portal</a></h3>
                 <p class="pf-card__sum">Employee records, leave and attendance, shift rosters, payroll runs and payslips, with approval flows that match how the company actually works.</p>
                 <ul class="pf-list"><li>Configurable approval chains for leave and expenses</li><li>Payroll calculation with an audit log and re-run safety</li><li>Payslips and reports delivered by email as PDFs</li></ul>
                 <div class="chips pf-stack"><span class="chip">Django</span><span class="chip">DRF</span><span class="chip">PostgreSQL</span><span class="chip">Celery</span><span class="chip">Docker</span><span class="chip">AWS</span></div>
+                <span class="work-card__link pf-card__more">View details &amp; roadmap<span class="arrow">→</span></span>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <!-- projects:end -->
 
-      <!-- ================= PODAGAIN CASE STUDY ================= -->
-      <section class="sec sec--abyss" id="podagain">
-        <div class="container">
-          <div class="section-head">
-            <p class="eyebrow">Case study</p>
-            <h2 class="h2">PodAgain: AI Learning &amp; Podcast Platform</h2>
-            <p>Podcasts, blogs, PDFs and documents turned into a searchable knowledge base, then into a two-person AI podcast on demand.</p>
-          </div>
-          <div class="work-item card pf-feature" data-tilt>
-            <div>
-              <p class="eyebrow" style="margin-bottom:6px">MERN · Python · Celery · AWS EC2 · AI</p>
-              <h3>Re-architected for long-running AI work</h3>
-              <p>Users add podcast RSS feeds, blogs, PDFs and documents. The platform transcribes, processes and indexes them, so users can later ask questions or give a prompt and generate a conversational two-host podcast from what they have learned.</p>
-              <p>The project arrived as a prototype with blocking, synchronous APIs and no real infrastructure for long AI jobs. We rebuilt the foundations and widened what the product could do.</p>
-              <div class="chips pf-stack"><span class="chip">React</span><span class="chip">Node / Express</span><span class="chip">MongoDB</span><span class="chip">Python</span><span class="chip">Celery</span><span class="chip">Redis</span><span class="chip">AWS EC2 (GPU)</span><span class="chip">Pinecone</span><span class="chip">AssemblyAI</span><span class="chip">Qwen</span></div>
-              <div class="work-item__metrics">
-                <div class="mini"><b>4</b><span>content sources: RSS, blogs, PDFs, documents</span></div>
-                <div class="mini"><b>GPU on demand</b><span>starts for AI jobs, stops when idle</span></div>
-                <div class="mini"><b>Credits</b><span>subscriptions plus per-minute usage</span></div>
-              </div>
-            </div>
-            <div class="work-item__art" aria-hidden="true"><span class="work-item__tag">Case study</span><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M60 22 a14 14 0 0 1 14 14 v22 a14 14 0 0 1 -28 0 V36 a14 14 0 0 1 14 -14Z" fill="none" stroke="currentColor" stroke-width="4"/><path d="M34 54 a26 26 0 0 0 52 0 M60 80 V100 M46 100 H74" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg></div>
-          </div>
-
-          <details class="pf-more" open>
-            <summary>How we re-architected it <span aria-hidden="true">+</span></summary>
-          <div class="pf-split">
-            <div class="card pf-panel">
-              <h3>What we built</h3>
-              <ul class="pf-list">
-                <li><b>Queue-based job system.</b> Celery workers replaced blocking requests for ingestion, transcription, content processing, embeddings, vector indexing and audio generation.</li>
-                <li><b>Leaner GPU server.</b> Business logic moved from the Python AI server into the main backend, so the expensive GPU instance only does GPU work.</li>
-                <li><b>Smart GPU scheduling.</b> The EC2 GPU instance starts when a job needs it and shuts down after a configurable idle period.</li>
-                <li><b>Open-source voices.</b> ElevenLabs was replaced with Qwen-based generation for the conversational podcast audio.</li>
-                <li><b>Credits and billing.</b> Subscription tiers plus usage-based minute credits for transcription, AI voice and audio processing.</li>
-                <li><b>Retrieval pipeline.</b> AssemblyAI transcripts and document text are embedded into Pinecone for semantic search across everything a user has added.</li>
-                <li><b>Frontend overhaul.</b> A refreshed interface and a product that now goes well beyond podcasts.</li>
-              </ul>
-            </div>
-            <div class="card pf-panel">
-              <h3>The architecture</h3>
-              <ol class="pf-flow">
-                <li><b>Frontend</b><span>React app</span></li>
-                <li><b>Node / Express backend</b><span>auth, billing, business logic</span></li>
-                <li><b>Job queue</b><span>Celery + Redis</span></li>
-                <li><b>Worker processes</b><span>ingest, transcribe, embed</span></li>
-                <li><b>AI / GPU infrastructure</b><span>started on demand</span></li>
-                <li><b>Vector database</b><span>Pinecone</span></li>
-              </ol>
-              <p class="pf-note">Long-running workloads now run independently of user-facing requests, and GPU spend follows actual usage.</p>
-            </div>
-          </div>
-          </details>
-        </div>
-      </section>
 
 
 
@@ -450,7 +409,6 @@
     (function () {
       var btns = document.querySelectorAll('.pf-filter__btn');
       var cards = document.querySelectorAll('.pf-card');
-      var cs = document.getElementById('podagain');
       btns.forEach(function (b) {
         b.addEventListener('click', function () {
           var f = b.getAttribute('data-filter');
