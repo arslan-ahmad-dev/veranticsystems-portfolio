@@ -208,12 +208,13 @@
   const burger = document.getElementById('nav-burger');
   const mobileMenu = document.getElementById('mobile-menu');
   function setMobile(open) {
+    if (!burger || !mobileMenu) return;
     burger.classList.toggle('is-open', open);
     mobileMenu.classList.toggle('is-open', open);
     burger.setAttribute('aria-expanded', String(open));
   }
-  burger.addEventListener('click', () => setMobile(!mobileMenu.classList.contains('is-open')));
-  mobileMenu.querySelectorAll('a, button').forEach((el) => el.addEventListener('click', () => setMobile(false)));
+  if (burger) burger.addEventListener('click', () => setMobile(!mobileMenu.classList.contains('is-open')));
+  if (mobileMenu) mobileMenu.querySelectorAll('a, button').forEach((el) => el.addEventListener('click', () => setMobile(false)));
 
   /* ---------- Booking modal ---------- */
   const modal = document.getElementById('booking-modal');
