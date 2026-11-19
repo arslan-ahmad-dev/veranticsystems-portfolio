@@ -361,9 +361,25 @@ def build_sitemap():
     (ROOT / "sitemap.xml").write_text(x, encoding="utf-8")
     (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {LIVE}sitemap.xml\n", encoding="utf-8")
 
+def build_recent():
+    """recent.json feeds the 'Recent projects' banner on veranticsystems.com.
+    Newest first: projects with an "added" date (YYYY-MM-DD) by date, then the featured one, then the rest in list order."""
+    import json
+    order = sorted(range(len(PROJECTS)), key=lambda i: (
+        PROJECTS[i].get("added") is None, "".join(chr(255 - ord(c)) for c in PROJECTS[i].get("added", "")),
+        not PROJECTS[i].get("featured"), i))
+    items = []
+    for i in order:
+        p = PROJECTS[i]
+        short = p["short"] if len(p["short"]) <= 140 else p["short"][:137].rsplit(" ", 1)[0] + "..."
+        items.append({"name": p["name"], "tag": p["tag"], "url": f'{LIVE}projects/{p["slug"]}/', "summary": short})
+    newest = max((p.get("added") for p in PROJECTS if p.get("added")), default="")
+    (ROOT / "recent.json").write_text(json.dumps({"updated": newest, "projects": items}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
 if __name__ == "__main__":
     idx = build_index()
     for i, p in enumerate(PROJECTS):
         build_detail(p, idx, i)
     build_sitemap()
-    print("built", len(PROJECTS), "detail pages")
+    build_recent()
+    print("built", len(PROJECTS), "detail pages and recent.json")

@@ -200,7 +200,7 @@ PROJECTS = [
  "screens": [("doc", "Invoice with extracted fields highlighted"), ("table", "Batch results with confidence scores"), ("flow", "Queued extraction pipeline")],
 },
 {
- "slug": "county-surplus-list-pipeline", "group": "python", "tag": "Python · Technical demo", "icon": "doc", "bg": "b",
+ "slug": "county-surplus-list-pipeline", "group": "python", "tag": "Python · Technical demo", "icon": "doc", "bg": "b", "added": "2026-11-19",
  "name": "County Surplus-List Pipeline with Audit Trail", "cat": "Python · PDF parsing · SQLite · Hash-chained audit log",
  "short": "Technical demonstration: retrieves official county excess-funds lists live, imports them, flags duplicates and missing values, keeps a tamper-evident evidence log, and blocks every case until current funds are verified.",
  "bullets": ["Live retrieval from three official county sources, each with its link, time and SHA-256 recorded", "A published surplus is treated as a lead, never as a current balance", "Every status change is written to a hash-chained log that cannot be edited without detection"],

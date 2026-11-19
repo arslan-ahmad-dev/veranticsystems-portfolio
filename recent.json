@@ -1,0 +1,107 @@
+{
+ "updated": "2026-11-19",
+ "projects": [
+  {
+   "name": "County Surplus-List Pipeline with Audit Trail",
+   "tag": "Python · Technical demo",
+   "url": "https://portfolio.veranticsystems.com/projects/county-surplus-list-pipeline/",
+   "summary": "Technical demonstration: retrieves official county excess-funds lists live, imports them, flags duplicates and missing values, keeps a..."
+  },
+  {
+   "name": "PodAgain: AI Learning & Podcast Platform",
+   "tag": "Featured · MERN + AI",
+   "url": "https://portfolio.veranticsystems.com/projects/podagain/",
+   "summary": "Podcasts, blogs, PDFs and documents turned into a searchable knowledge base, then into a two-person AI podcast. Rebuilt from a blocking..."
+  },
+  {
+   "name": "AI Support Copilot for Knowledge Bases",
+   "tag": "MERN + AI",
+   "url": "https://portfolio.veranticsystems.com/projects/ai-support-copilot/",
+   "summary": "A React front end and Node API over a Python retrieval service. Teams upload help-centre articles, PDFs and past tickets; agents get..."
+  },
+  {
+   "name": "Multi-Tenant Booking & Subscription Platform",
+   "tag": "MERN",
+   "url": "https://portfolio.veranticsystems.com/projects/booking-subscription-platform/",
+   "summary": "A white-label booking SaaS: each business gets its own branded site, staff calendars, deposits and recurring plans, all on one codebase."
+  },
+  {
+   "name": "Live Logistics & Dispatch Dashboard",
+   "tag": "MERN",
+   "url": "https://portfolio.veranticsystems.com/projects/logistics-dispatch-dashboard/",
+   "summary": "Dispatchers see every vehicle and job on one live map. Drivers update status from a mobile web view, and customers get tracking links."
+  },
+  {
+   "name": "Restaurant Ordering & Kitchen Display System",
+   "tag": "MERN",
+   "url": "https://portfolio.veranticsystems.com/projects/restaurant-ordering-kds/",
+   "summary": "Customers order from a QR code at the table or online. Orders appear instantly on kitchen screens, and the front of house sees status..."
+  },
+  {
+   "name": "Property Listings Marketplace",
+   "tag": "MERN",
+   "url": "https://portfolio.veranticsystems.com/projects/property-listings-marketplace/",
+   "summary": "Agents publish listings with photo galleries; buyers search on a map with filters, save searches and send enquiries straight to the agent."
+  },
+  {
+   "name": "Telehealth Appointment & Video Consult Platform",
+   "tag": "MERN",
+   "url": "https://portfolio.veranticsystems.com/projects/telehealth-video-consult/",
+   "summary": "Patients book a slot, pay, and join a video consultation from the browser. Clinicians get a calendar, notes and follow-up prompts."
+  },
+  {
+   "name": "Invoicing & Expense SaaS",
+   "tag": "MERN",
+   "url": "https://portfolio.veranticsystems.com/projects/invoicing-expense-saas/",
+   "summary": "Freelancers and small teams create branded invoices, accept card payments, track expenses and see cash flow in one dashboard."
+  },
+  {
+   "name": "Amazon Price & Seller Monitor",
+   "tag": "Python",
+   "url": "https://portfolio.veranticsystems.com/projects/amazon-price-seller-monitor/",
+   "summary": "A scheduled pipeline that tracks price, stock, Buy Box owner and seller count for a list of Amazon listings, and alerts the team when..."
+  },
+  {
+   "name": "Walmart Catalogue & Pricing Scraper",
+   "tag": "Python",
+   "url": "https://portfolio.veranticsystems.com/projects/walmart-catalogue-scraper/",
+   "summary": "Collects product, price, availability and review data for chosen categories and sellers, normalises it and serves it through a private..."
+  },
+  {
+   "name": "Cross-Marketplace Repricing Engine",
+   "tag": "Python",
+   "url": "https://portfolio.veranticsystems.com/projects/cross-marketplace-repricer/",
+   "summary": "Combines Amazon and Walmart price feeds with your own cost data and rules to propose or push new prices, with guardrails on minimum margin."
+  },
+  {
+   "name": "Invoice & Document Extraction Service",
+   "tag": "Python",
+   "url": "https://portfolio.veranticsystems.com/projects/invoice-document-extraction/",
+   "summary": "Upload invoices, receipts or forms and get structured JSON back. Large batches go through a queue and results are delivered by webhook."
+  },
+  {
+   "name": "School Management System",
+   "tag": "Django",
+   "url": "https://portfolio.veranticsystems.com/projects/school-management-system/",
+   "summary": "Admissions, attendance, timetables, fee collection, exams and report cards in one system, with separate views for admins, teachers,..."
+  },
+  {
+   "name": "Multi-Vendor Marketplace",
+   "tag": "Django",
+   "url": "https://portfolio.veranticsystems.com/projects/multi-vendor-marketplace/",
+   "summary": "Vendors list products and manage orders, customers shop one cart across vendors, and admins control commissions and payouts."
+  },
+  {
+   "name": "Inventory & Order Management System",
+   "tag": "Django",
+   "url": "https://portfolio.veranticsystems.com/projects/inventory-order-management/",
+   "summary": "Multi-warehouse stock, purchase orders, sales orders and invoicing for a distributor, with barcode scanning and low-stock reordering."
+  },
+  {
+   "name": "HR, Leave & Payroll Portal",
+   "tag": "Django",
+   "url": "https://portfolio.veranticsystems.com/projects/hr-leave-payroll-portal/",
+   "summary": "Employee records, leave and attendance, shift rosters, payroll runs and payslips, with approval flows that match how the company..."
+  }
+ ]
+}
