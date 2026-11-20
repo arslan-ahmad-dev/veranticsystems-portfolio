@@ -5,6 +5,8 @@ import html, re, pathlib, sys
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from data import PROJECTS, GROUPS
 from icons import ICONS
+from screens import SCREENS
+import mockups
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 LIVE = "https://portfolio.veranticsystems.com/"
@@ -225,9 +227,13 @@ def build_detail(p, index_html, i):
     h = to_sub(h)
     hdr = to_sub(header).replace('href="#top"', 'href="../../"').replace('<a href="#top" class="brand"', '<a href="../../" class="brand"')
 
+    if p["slug"] in SCREENS:   # realistic sample-data screens (tools/screens.py); the abstract wireframes below are only a fallback
+        screen_svgs = [(mockups.render(kind, spec, cap, url), cap) for kind, cap, url, spec in SCREENS[p["slug"]]]
+    else:
+        screen_svgs = [(frame(MOCK[kind](), cap), cap) for kind, cap in p["screens"]]
     shots = "".join(
-        f'<figure class="pf-shot card{" pf-shot--wide" if k == 0 else ""}">{frame(MOCK[kind](), cap)}<figcaption>{esc(cap)}</figcaption></figure>'
-        for k, (kind, cap) in enumerate(p["screens"]))
+        f'<figure class="pf-shot card{" pf-shot--wide" if k == 0 else ""}">{svg}<figcaption>{esc(cap)}</figcaption></figure>'
+        for k, (svg, cap) in enumerate(screen_svgs))
     outcomes = "".join(f'<div class="mini"><b>{esc(a)}</b><span>{esc(b)}</span></div>' for a, b in p["outcomes"])
     feats = "".join(f'<div class="rule card"><h3>{esc(a)}</h3><p>{esc(b)}</p></div>' for a, b in p["features"])
     flow = "".join(f"<li><b>{esc(a)}</b><span>{esc(b)}</span></li>" for a, b in p["flow"])
@@ -236,8 +242,7 @@ def build_detail(p, index_html, i):
         for k, (ph, du, tasks) in enumerate(p["roadmap"]))
     note = ("A typical delivery roadmap for a project of this kind." if not p.get("featured")
             else "How the PodAgain work was sequenced, from audit to launch.")
-    illus = ("Screens are illustrative layouts of the product, not client screenshots." if not p.get("featured")
-             else "Screens are illustrative layouts of the product.")
+    illus = "Illustrative screens with sample data. Client data is confidential, so none is shown."
 
     body = f'''<body>
 <a class="skip-link" href="#main">Skip to content</a>
