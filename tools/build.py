@@ -7,6 +7,7 @@ from data import PROJECTS, GROUPS
 from icons import ICONS
 from screens import SCREENS
 import mockups
+import banners
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 LIVE = "https://portfolio.veranticsystems.com/"
@@ -156,9 +157,7 @@ def card(p, base="", feat=False):
     cls = "work-card pf-card card" + (" pf-card--pod" if feat else "")
     return f'''            <div class="{cls}" data-group="{p['group']}" data-tilt>
               <div class="work-card__media">
-                <div class="work-card__bg work-card__bg--{p['bg']}">
-                  <svg class="work-card__art" viewBox="0 0 120 120" aria-hidden="true">{ic}</svg>
-                </div>
+                <div class="work-card__bg pf-banner">{banners.banner(p['slug'])}</div>
                 <span class="work-card__tag">{esc(p['tag'])}</span>
               </div>
               <div class="work-card__body">

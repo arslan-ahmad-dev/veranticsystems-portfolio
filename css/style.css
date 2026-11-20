@@ -589,6 +589,11 @@ dl, dd, dt, blockquote, figure { margin: 0; }
 .work-card__bg--a { background-image: radial-gradient(at 30% 60%, rgba(var(--accent-rgb), .45) 0%, transparent 55%), radial-gradient(at 80% 20%, rgba(var(--glow-rgb), .3) 0%, transparent 50%); }
 .work-card__bg--b { background-image: radial-gradient(at 60% 30%, rgba(var(--accent-rgb), .4) 0%, transparent 55%), radial-gradient(at 20% 80%, rgba(var(--glow-rgb), .25) 0%, transparent 50%); }
 .work-card__bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.pf-banner { background: none; }
+.pf-banner__svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; transition: transform .6s cubic-bezier(.2, .7, .2, 1); }
+.pf-banner__svg text { font-family: inherit; }
+.work-card:hover .pf-banner__svg { transform: scale(1.06); }
+:root[data-theme="mono"] .pf-banner { filter: grayscale(1) contrast(1.08); }
 .work-card__art { position: absolute; left: 50%; top: 50%; width: 112px; height: 112px; transform: translate(-50%, -50%); color: var(--accent); opacity: .55; transition: transform .3s; }
 .work-card:hover .work-card__art { transform: translate(-50%, -50%) scale(1.06); }
 .work-card__tag {
